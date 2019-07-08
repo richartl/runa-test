@@ -1,0 +1,6 @@
+en:
+  exceptions:
+    code_401: "You don\'t have access to this resource"
+    code_422: "Your data is wrong, please check and try again"
+    code_409: "We have problems saving your data, please try again"
+    code_404: "Resource Not Found"

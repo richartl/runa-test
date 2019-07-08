@@ -1,0 +1,82 @@
+{
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "required": [
+    "data",
+    "meta"
+  ],
+  "properties": {
+    "data": {
+      "$id": "#/properties/data",
+      "type": "object",
+      "title": "The Data Schema",
+      "required": [
+        "id",
+        "type",
+        "attributes"
+      ],
+      "properties": {
+        "id": {
+          "$id": "#/properties/data/properties/id",
+          "type": "string",
+          "title": "The Id Schema",
+          "default": "",
+          "examples": [
+            "94"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "type": {
+          "$id": "#/properties/data/properties/type",
+          "type": "string",
+          "title": "The Type Schema",
+          "default": "",
+          "examples": [
+            "users"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "attributes": {
+          "$id": "#/properties/data/properties/attributes",
+          "type": "object",
+          "title": "The Attributes Schema",
+          "required": [
+            "email"
+          ],
+          "properties": {
+            "email": {
+              "$id": "#/properties/data/properties/attributes/properties/email",
+              "type": "string",
+              "title": "The Email Schema",
+              "default": "",
+              "examples": [
+                "sherry@murazik.net"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    },
+    "meta": {
+      "$id": "#/properties/meta",
+      "type": "object",
+      "title": "The Meta Schema",
+      "required": [
+        "auth_token"
+      ],
+      "properties": {
+        "auth_token": {
+          "$id": "#/properties/meta/properties/auth_token",
+          "type": "string",
+          "title": "The auth_token Schema",
+          "default": "",
+          "examples": [
+            "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5NH0.ArglqBn_CR6RyVxXoTSTItYLO0fWYaoo4m5y9Hw0q_c"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    }
+  }
+}

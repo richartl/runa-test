@@ -1,0 +1,82 @@
+{
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "$id": "#/properties/data",
+      "type": "object",
+      "title": "The Data Schema",
+      "required": [
+        "id",
+        "type",
+        "attributes"
+      ],
+      "properties": {
+        "id": {
+          "$id": "#/properties/data/properties/id",
+          "type": "string",
+          "title": "The Id Schema",
+          "default": "",
+          "examples": [
+            "1"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "type": {
+          "$id": "#/properties/data/properties/type",
+          "type": "string",
+          "title": "The Type Schema",
+          "default": "",
+          "examples": [
+            "error"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "attributes": {
+          "$id": "#/properties/data/properties/attributes",
+          "type": "object",
+          "title": "The Attributes Schema",
+          "required": [
+            "status",
+            "message",
+            "description"
+          ],
+          "properties": {
+            "status": {
+              "$id": "#/properties/data/properties/attributes/properties/status",
+              "type": "integer",
+              "title": "The Status Schema",
+              "default": 0,
+              "examples": [
+                401
+              ]
+            },
+            "message": {
+              "$id": "#/properties/data/properties/attributes/properties/message",
+              "type": "string",
+              "title": "The Message Schema",
+              "default": "",
+              "examples": [
+                "translation missing: en.exceptions.code_401"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "description": {
+              "$id": "#/properties/data/properties/attributes/properties/description",
+              "type": "string",
+              "title": "The Description Schema",
+              "default": "",
+              "examples": [
+                "Unauthorized"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

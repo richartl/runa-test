@@ -1,0 +1,6 @@
+es:
+  exceptions:
+    code_404: "No encontramos el recurso que nos has solicitado"
+    code_401: "Lo siento no tienes permisos para acceder a este recurso"
+    code_422: "Alguno o varios de tus campos tienen un formato erróneo por favor checalos"
+    code_409: "Tenemos algunos problemas para guardar tu información, por favor intenta otra vez"

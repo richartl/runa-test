@@ -1,0 +1,169 @@
+{
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "$id": "#/properties/data",
+      "type": "array",
+      "title": "The Data Schema",
+      "items": {
+        "$id": "#/properties/data/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "id",
+          "type",
+          "attributes",
+          "relationships"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/data/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "default": "",
+            "examples": [
+              "533"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "type": {
+            "$id": "#/properties/data/items/properties/type",
+            "type": "string",
+            "title": "The Type Schema",
+            "default": "",
+            "examples": [
+              "users"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "attributes": {
+            "$id": "#/properties/data/items/properties/attributes",
+            "type": "object",
+            "title": "The Attributes Schema",
+            "required": [
+              "email"
+            ],
+            "properties": {
+              "email": {
+                "$id": "#/properties/data/items/properties/attributes/properties/email",
+                "type": "string",
+                "title": "The Email Schema",
+                "default": "",
+                "examples": [
+                  "admin_runa@runa.test"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          },
+          "relationships": {
+            "$id": "#/properties/data/items/properties/relationships",
+            "type": "object",
+            "title": "The Relationships Schema",
+            "required": [
+              "roles"
+            ],
+            "properties": {
+              "roles": {
+                "$id": "#/properties/data/items/properties/relationships/properties/roles",
+                "type": "object",
+                "title": "The Roles Schema",
+                "required": [
+                  "data"
+                ],
+                "properties": {
+                  "data": {
+                    "$id": "#/properties/data/items/properties/relationships/properties/roles/properties/data",
+                    "type": "array",
+                    "title": "The Data Schema",
+                    "items": {
+                      "$id": "#/properties/data/items/properties/relationships/properties/roles/properties/data/items",
+                      "type": "object",
+                      "title": "The Items Schema",
+                      "required": [
+                        "id"
+                      ],
+                      "properties": {
+                        "id": {
+                          "$id": "#/properties/data/items/properties/relationships/properties/roles/properties/data/items/properties/id",
+                          "type": [
+                            "string",
+                            "integer"
+                          ],
+                          "title": "The Id Schema",
+                          "default": 0,
+                          "examples": [
+                            2
+                          ]
+                        },
+                        "name": {
+                          "$id": "#/properties/data/items/properties/relationships/properties/roles/properties/data/items/properties/name",
+                          "type": "string",
+                          "title": "The Name Schema",
+                          "default": "",
+                          "examples": [
+                            "admin"
+                          ],
+                          "pattern": "^(.*)$"
+                        },
+                        "resource_type": {
+                          "$id": "#/properties/data/items/properties/relationships/properties/roles/properties/data/items/properties/resource_type",
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "title": "The Resource_type Schema",
+                          "default": null,
+                          "examples": [
+                            null
+                          ]
+                        },
+                        "resource_id": {
+                          "$id": "#/properties/data/items/properties/relationships/properties/roles/properties/data/items/properties/resource_id",
+                          "type": [
+                            "string",
+                            "integer",
+                            "null"
+                          ],
+                          "title": "The Resource_id Schema",
+                          "default": null,
+                          "examples": [
+                            null
+                          ]
+                        },
+                        "created_at": {
+                          "$id": "#/properties/data/items/properties/relationships/properties/roles/properties/data/items/properties/created_at",
+                          "type": "string",
+                          "title": "The Created_at Schema",
+                          "default": "",
+                          "examples": [
+                            "2019-07-02T03:55:51.819Z"
+                          ],
+                          "pattern": "^(.*)$"
+                        },
+                        "updated_at": {
+                          "$id": "#/properties/data/items/properties/relationships/properties/roles/properties/data/items/properties/updated_at",
+                          "type": "string",
+                          "title": "The Updated_at Schema",
+                          "default": "",
+                          "examples": [
+                            "2019-07-02T03:55:51.819Z"
+                          ],
+                          "pattern": "^(.*)$"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
